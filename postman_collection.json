@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "Student Course Management System",
+    "description": "Postman Collection for Student Course Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Home",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/"
+      }
+    },
+    {
+      "name": "Add Student",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/students",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"student_name\":\"Rahul\",\n\"email\":\"rahul@gmail.com\",\n\"department\":\"CSE\"\n}"
+        }
+      }
+    },
+    {
+      "name": "View Students",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/students"
+      }
+    },
+    {
+      "name": "Add Course",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/courses",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"course_name\":\"Python Programming\",\n\"course_code\":\"PY101\"\n}"
+        }
+      }
+    },
+    {
+      "name": "View Courses",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/courses"
+      }
+    },
+    {
+      "name": "Enroll Student",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/enroll",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"student_id\":1,\n\"course_id\":1\n}"
+        }
+      }
+    },
+    {
+      "name": "View Enrollments",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/enrollments"
+      }
+    }
+  ]
+}
